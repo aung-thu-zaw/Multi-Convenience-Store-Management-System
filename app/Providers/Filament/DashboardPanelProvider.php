@@ -31,12 +31,8 @@ class DashboardPanelProvider extends PanelProvider
             ->darkMode(false)
             ->defaultThemeMode(ThemeMode::Light)
             ->viteTheme('resources/css/filament/dashboard/theme.css')
-            // ->brandLogo(asset('images/logo.svg'))
-            // ->brandLogoHeight('2rem')
-            // ->favicon(asset('images/favicon.png'))
-            // ->brandName('Convenience Store')
+            ->brandName('Convenience Store')
             ->login()
-            // ->unsavedChangesAlerts()
             ->colors([
                 'primary' => Color::Amber
             ])
