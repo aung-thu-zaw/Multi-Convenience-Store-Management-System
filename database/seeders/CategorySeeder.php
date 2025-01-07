@@ -21,7 +21,6 @@ class CategorySeeder extends Seeder
     {
         $category = Category::create([
             'name' => $category['name'],
-            'slug' => $category['slug'],
             'parent_id' => $parentId,
         ]);
 

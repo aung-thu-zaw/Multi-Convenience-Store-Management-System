@@ -21,6 +21,7 @@ return new class () extends Migration {
             $table->string('address');
             $table->enum('status', ['active', 'inactive']);
             $table->timestamp('last_login_at')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
 

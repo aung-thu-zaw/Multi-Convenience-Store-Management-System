@@ -285,8 +285,4 @@ return  collect([
         'name' => 'Samsung',
         'logo' => 'samsung'
     ],
-    [
-        'name' => 'Belkin',
-        'logo' => 'belkin'
-    ],
 ]);
