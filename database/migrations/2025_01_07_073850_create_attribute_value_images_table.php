@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('product_variants', function (Blueprint $table) {
+        Schema::create('attribute_value_images', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
-            $table->string('sku')->unique();
-            $table->string('barcode')->unique();
-            $table->decimal('cost_price', 10, 2)->default(0.00);
-            $table->decimal('price', 10, 2);
-            $table->integer('stock_quantity')->default(0);
+            $table->foreignId('attribute_value_id')->constrained()->cascadeOnDelete();
+            $table->string('image_url');
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('product_variants');
+        Schema::dropIfExists('attribute_value_images');
     }
 };

@@ -90,7 +90,7 @@ class ProductSeeder extends Seeder
         $combinations = $this->getCombinations($attributes);
 
         collect($combinations)->each(function ($combination) use ($category, $product) {
-            $sku = (new GeneratorService())->generateProductSKU($category, (array) $combination);
+            $sku = (new GeneratorService)->generateProductSKU($category, (array) $combination);
 
             $variant = ProductVariant::create([
                 'product_id' => $product->id,
