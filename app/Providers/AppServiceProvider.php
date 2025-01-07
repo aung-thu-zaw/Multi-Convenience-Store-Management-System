@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Model::unguard();
 
-        if (!app()->isProduction()) {
+        if (! app()->isProduction()) {
             Model::preventLazyLoading();
         }
     }

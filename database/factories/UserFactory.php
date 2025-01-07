@@ -24,7 +24,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'avatar' => "https://i.pravatar.cc/150?img=" . fake()->numberBetween(1, 70),
+            'avatar' => 'https://i.pravatar.cc/150?img='.fake()->numberBetween(1, 70),
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'phone_number' => fake()->unique()->phoneNumber(),
@@ -33,7 +33,7 @@ class UserFactory extends Factory
             'status' => fake()->randomElement(['active', 'inactive']),
             'last_login_at' => fake()->dateTimeBetween('-1 week', 'now'),
             'remember_token' => Str::random(10),
-            "created_at" => fake()->dateTimeBetween('-1 years', 'now'),
+            'created_at' => fake()->dateTimeBetween('-1 years', 'now'),
         ];
     }
 }

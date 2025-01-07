@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Relations\Pivot;
+use Illuminate\Database\Eloquent\Model;
 
-class ProductVariantAttribute extends Pivot
+class ProductVariantAttribute extends Model
 {
     //
 }

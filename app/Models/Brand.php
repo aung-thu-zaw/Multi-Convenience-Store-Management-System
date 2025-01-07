@@ -11,6 +11,7 @@ class Brand extends Model
 {
     /** @use HasFactory<\Database\Factories\BrandFactory> */
     use HasFactory;
+
     use HasSlug;
 
     public function getSlugOptions(): SlugOptions

@@ -228,5 +228,5 @@ return collect([
         ]),
         'latitude' => 12.421678,
         'longitude' => 98.628123,
-    ]
-    ]);
+    ],
+]);

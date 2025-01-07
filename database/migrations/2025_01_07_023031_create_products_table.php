@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class () extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      */
@@ -12,14 +13,13 @@ return new class () extends Migration {
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("store_id")->constrained();
-            $table->foreignId("category_id")->constrained();
-            $table->foreignId("brand_id")->constrained();
-            $table->foreignId("unit_id")->constrained();
-            $table->string("name");
-            $table->string("slug")->unique();
-            $table->text("description")->nullable();
-            $table->string('barcode')->unique()->nullable();
+            $table->foreignId('store_id')->constrained();
+            $table->foreignId('category_id')->constrained();
+            $table->foreignId('brand_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('unit_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->text('description')->nullable();
             $table->enum('status', ['draft', 'published', 'archived'])->default('draft');
             $table->timestamps();
         });

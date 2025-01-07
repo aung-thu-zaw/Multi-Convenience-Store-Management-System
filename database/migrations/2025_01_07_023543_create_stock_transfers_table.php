@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class () extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      */
@@ -16,7 +17,7 @@ return new class () extends Migration {
             $table->foreignId('to_store_id')->nullable()->constrained('stores')->cascadeOnDelete();
             $table->foreignId('product_variant_id')->constrained('product_variants')->cascadeOnDelete();
             $table->integer('quantity');
-            $table->enum('status', ['pending','approved','completed','rejected'])->default('pending');
+            $table->enum('status', ['pending', 'approved', 'completed', 'rejected'])->default('pending');
             $table->timestamps();
         });
     }

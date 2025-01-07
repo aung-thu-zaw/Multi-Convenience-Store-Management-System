@@ -1,288 +1,111 @@
 <?php
 
-return  collect([
+return collect([
+    // Food & Snacks
     [
         'name' => 'Lay\'s',
-        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Lay%27s_logo_2019.svg/1200px-Lay%27s_logo_2019.svg.png'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Lay%27s_logo_2019.svg/1200px-Lay%27s_logo_2019.svg.png',
     ],
     [
         'name' => 'Pringles',
-        'logo' => 'pringles'
-    ],
-    [
-        'name' => 'Doritos',
-        'logo' => 'doritos'
-    ],
-    [
-        'name' => 'Mars',
-        'logo' => 'mars'
-    ],
-    [
-        'name' => 'Snickers',
-        'logo' => 'snickers'
-    ],
-    [
-        'name' => 'Skittles',
-        'logo' => 'skittles'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Pringles_2021.svg/800px-Pringles_2021.svg.png',
     ],
     [
         'name' => 'Oreo',
-        'logo' => 'oreo'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Oreo_logo.svg/800px-Oreo_logo.svg.png',
     ],
     [
         'name' => 'Chips Ahoy!',
-        'logo' => 'chips-ahoy'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Chips_Ahoy%21_logo.svg/800px-Chips_Ahoy%21_logo.svg.png',
     ],
-    [
-        'name' => 'Milano',
-        'logo' => 'milano'
-    ],
-    [
-        'name' => 'Nissin',
-        'logo' => 'nissin'
-    ],
-    [
-        'name' => 'Maruchan',
-        'logo' => 'maruchan'
-    ],
-    [
-        'name' => 'Indomie',
-        'logo' => 'indomie'
-    ],
-    [
-        'name' => 'Wonder Bread',
-        'logo' => 'wonder-bread'
-    ],
-    [
-        'name' => 'Sara Lee',
-        'logo' => 'sara-lee'
-    ],
-    [
-        'name' => 'Entenmann\'s',
-        'logo' => 'entenmanns'
-    ],
+
+    // Beverages
     [
         'name' => 'Coca-Cola',
-        'logo' => 'coca-cola'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Coca-Cola_logo.svg/800px-Coca-Cola_logo.svg.png',
     ],
     [
         'name' => 'Pepsi',
-        'logo' => 'pepsi'
-    ],
-    [
-        'name' => 'Sprite',
-        'logo' => 'sprite'
-    ],
-    [
-        'name' => 'Tropicana',
-        'logo' => 'tropicana'
-    ],
-    [
-        'name' => 'Minute Maid',
-        'logo' => 'minute-maid'
-    ],
-    [
-        'name' => 'Simply Orange',
-        'logo' => 'simply-orange'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Pepsi_logo_2014.svg/800px-Pepsi_logo_2014.svg.png',
     ],
     [
         'name' => 'Red Bull',
-        'logo' => 'red-bull'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/RedBull_logo.svg/800px-RedBull_logo.svg.png',
     ],
     [
-        'name' => 'Monster',
-        'logo' => 'monster'
+        'name' => 'Monster Energy',
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Monster_Energy_logo.svg/800px-Monster_Energy_logo.svg.png',
     ],
-    [
-        'name' => '5-hour Energy',
-        'logo' => '5-hour-energy'
-    ],
-    [
-        'name' => 'Nestlé Pure Life',
-        'logo' => 'nestle-pure-life'
-    ],
-    [
-        'name' => 'Evian',
-        'logo' => 'evian'
-    ],
-    [
-        'name' => 'Fiji Water',
-        'logo' => 'fiji-water'
-    ],
-    [
-        'name' => 'Starbucks',
-        'logo' => 'starbucks'
-    ],
-    [
-        'name' => 'Nescafé',
-        'logo' => 'nescafe'
-    ],
-    [
-        'name' => 'Lipton',
-        'logo' => 'lipton'
-    ],
+
+    // Health & Beauty
     [
         'name' => 'Colgate',
-        'logo' => 'colgate'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Colgate_logo.svg/800px-Colgate_logo.svg.png',
     ],
     [
         'name' => 'Dove',
-        'logo' => 'dove'
-    ],
-    [
-        'name' => 'Gillette',
-        'logo' => 'gillette'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Dove_brand_logo.svg/800px-Dove_brand_logo.svg.png',
     ],
     [
         'name' => 'Band-Aid',
-        'logo' => 'band-aid'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Band-Aid_logo.svg/800px-Band-Aid_logo.svg.png',
     ],
     [
         'name' => 'Tylenol',
-        'logo' => 'tylenol'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Tylenol_logo.svg/800px-Tylenol_logo.svg.png',
     ],
-    [
-        'name' => 'Advil',
-        'logo' => 'advil'
-    ],
-    [
-        'name' => 'Nature Made',
-        'logo' => 'nature-made'
-    ],
-    [
-        'name' => 'Centrum',
-        'logo' => 'centrum'
-    ],
-    [
-        'name' => 'One A Day',
-        'logo' => 'one-a-day'
-    ],
-    [
-        'name' => 'Neutrogena',
-        'logo' => 'neutrogena'
-    ],
-    [
-        'name' => 'Cetaphil',
-        'logo' => 'cetaphil'
-    ],
-    [
-        'name' => 'CeraVe',
-        'logo' => 'cerave'
-    ],
+
+    // Household Essentials
     [
         'name' => 'Clorox',
-        'logo' => 'clorox'
-    ],
-    [
-        'name' => 'Mr. Clean',
-        'logo' => 'mr-clean'
-    ],
-    [
-        'name' => 'Lysol',
-        'logo' => 'lysol'
-    ],
-    [
-        'name' => 'Charmin',
-        'logo' => 'charmin'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Clorox_logo.svg/800px-Clorox_logo.svg.png',
     ],
     [
         'name' => 'Bounty',
-        'logo' => 'bounty'
-    ],
-    [
-        'name' => 'Scott',
-        'logo' => 'scott'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Bounty_logo.svg/800px-Bounty_logo.svg.png',
     ],
     [
         'name' => 'Tide',
-        'logo' => 'tide'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Tide_logo.svg/800px-Tide_logo.svg.png',
     ],
     [
-        'name' => 'Gain',
-        'logo' => 'gain'
+        'name' => 'Cascade',
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Cascade_logo.svg/800px-Cascade_logo.svg.png',
     ],
-    [
-        'name' => 'Arm & Hammer',
-        'logo' => 'arm-and-hammer'
-    ],
-    [
-        'name' => 'Pyrex',
-        'logo' => 'pyrex'
-    ],
-    [
-        'name' => 'Tupperware',
-        'logo' => 'tupperware'
-    ],
-    [
-        'name' => 'Rubbermaid',
-        'logo' => 'rubbermaid'
-    ],
+
+    // Frozen Foods
     [
         'name' => 'Ben & Jerry\'s',
-        'logo' => 'ben-and-jerrys'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Ben_%26_Jerry%27s_logo.svg/800px-Ben_%26_Jerry%27s_logo.svg.png',
     ],
     [
-        'name' => 'Häagen-Dazs',
-        'logo' => 'haagen-dazs'
-    ],
-    [
-        'name' => 'Magnum',
-        'logo' => 'magnum'
+        'name' => 'Haagen-Dazs',
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/H%C3%A4agen-Dazs_logo.svg/800px-H%C3%A4agen-Dazs_logo.svg.png',
     ],
     [
         'name' => 'Lean Cuisine',
-        'logo' => 'lean-cuisine'
-    ],
-    [
-        'name' => 'Stouffer\'s',
-        'logo' => 'stouffers'
-    ],
-    [
-        'name' => 'Amy\'s Kitchen',
-        'logo' => 'amys-kitchen'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lean_Cuisine_logo.svg/800px-Lean_Cuisine_logo.svg.png',
     ],
     [
         'name' => 'Birds Eye',
-        'logo' => 'birds-eye'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Birds_Eye_logo.svg/800px-Birds_Eye_logo.svg.png',
     ],
-    [
-        'name' => 'Green Giant',
-        'logo' => 'green-giant'
-    ],
-    [
-        'name' => 'Pictsweet',
-        'logo' => 'pictsweet'
-    ],
+
+    // Electronics & Accessories
     [
         'name' => 'Duracell',
-        'logo' => 'duracell'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Duracell_logo.svg/800px-Duracell_logo.svg.png',
     ],
     [
         'name' => 'Energizer',
-        'logo' => 'energizer'
-    ],
-    [
-        'name' => 'Panasonic',
-        'logo' => 'panasonic'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Energizer_logo.svg/800px-Energizer_logo.svg.png',
     ],
     [
         'name' => 'Anker',
-        'logo' => 'anker'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Anker_Logo.svg/800px-Anker_Logo.svg.png',
     ],
     [
         'name' => 'Belkin',
-        'logo' => 'belkin'
-    ],
-    [
-        'name' => 'Mophie',
-        'logo' => 'mophie'
-    ],
-    [
-        'name' => 'Apple',
-        'logo' => 'apple'
-    ],
-    [
-        'name' => 'Samsung',
-        'logo' => 'samsung'
+        'logo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Belkin_logo.svg/800px-Belkin_logo.svg.png',
     ],
 ]);

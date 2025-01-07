@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Unit;
 use Illuminate\Database\Seeder;
 
 class UnitSeeder extends Seeder
@@ -12,6 +12,8 @@ class UnitSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $units = require database_path('data/Units.php');
+
+        $units->each(fn ($unit) => Unit::create($unit));
     }
 }
