@@ -1,0 +1,138 @@
+@import "/vendor/filament/filament/resources/css/theme.css";
+
+@config 'tailwind.config.js';
+
+.fi-sidebar-nav,
+.fi-sidebar-header {
+    @apply !bg-[#23252B];
+}
+
+.fi-sidebar-item > .fi-sidebar-item-button {
+    @apply hover:!bg-[#F2890A] hover:!bg-opacity-20 !transition-all !duration-300;
+}
+
+.fi-sidebar-item-icon {
+    @apply !text-[#EBEBE9] !font-bold;
+}
+
+.fi-sidebar-item-label {
+    @apply !text-[#EBEBE9] !font-bold;
+}
+
+.fi-active > .fi-sidebar-item-button {
+    @apply !bg-[#F2890A] hover:!bg-opacity-70 !rounded-md;
+}
+
+.fi-active > .fi-sidebar-item-button > .fi-sidebar-item-icon,
+.fi-active > .fi-sidebar-item-button > .fi-sidebar-item-label {
+    @apply !text-[#FFFFFF];
+}
+
+.fi-breadcrumbs-item-label {
+    @apply !text-gray-400;
+}
+
+.fi-ta-header-toolbar,
+.fi-ta-table,
+.fi-pagination,
+.fi-ta-header-cell,
+.fi-ta-actions-header-cell,
+.fi-ta-cell,
+.fi-ta-selection-indicator,
+.fi-ta-filter-indicators,
+.fi-ta-header-ctn,
+.fi-ta-empty-state,
+tbody,
+thead,
+table {
+    @apply !bg-[#23252C] !divide-gray-700;
+}
+
+.fi-checkbox-input {
+    @apply !bg-gray-600 checked:!bg-[#F2890A];
+}
+
+.fi-ta-header-cell-label,
+.fi-ta-text-item-label {
+    @apply !text-gray-200 !font-medium;
+}
+
+.fi-ta-ctn {
+    @apply !border-slate-800 !overflow-hidden;
+}
+
+.fi-main,
+.fi-header-heading,
+.fi-ta-empty-state-icon-ctn {
+    @apply !bg-[#101314] !text-white;
+}
+
+.fi-input-wrp,
+.fi-input,
+.fi-select-input,
+.fi-input-wrp-label {
+    @apply !bg-[#383C44] !text-gray-300 !overflow-hidden;
+}
+
+.fi-input-wrp-prefix {
+    @apply !border-gray-600;
+}
+
+.fi-pagination-overview,
+.fi-ta-filter-indicators > div > span,
+.fi-ta-empty-state-heading {
+    @apply !text-gray-300;
+}
+
+.fi-pagination-item-button {
+    @apply !text-white;
+}
+
+.fi-topbar > nav {
+    @apply !bg-[#23252B]  !shadow-none !ring-0;
+}
+
+.fi-btn {
+    @apply !bg-[#F2890A] !text-white !rounded-[0.3rem] !font-semibold !px-4 !py-2.5 !capitalize;
+}
+
+.fi-btn-icon {
+    @apply !text-white;
+}
+
+.fi-badge {
+    @apply !bg-[#383C44] !text-white;
+}
+
+.fi-ta-content,
+.fi-pagination {
+    @apply !border-gray-700;
+}
+
+.fi-dropdown-panel > div {
+    @apply !bg-[#23252B] !text-white !rounded-md !overflow-hidden !border !border-gray-700;
+}
+
+span,
+h4 {
+    @apply !text-white;
+}
+
+.fi-ta-ctn {
+    @apply !ring-0 !rounded-md !overflow-hidden !border !border-gray-600;
+}
+
+.fi-pagination-items {
+    @apply !bg-[#101314] !text-gray-300 !overflow-hidden !rounded-md;
+}
+
+.fi-dropdown-list-item {
+    @apply hover:!bg-[#383C44] !font-medium !text-white;
+}
+/* 101314 */
+/*
+.fi-pagination-item-button {
+    @apply !ring-0 !rounded-md !overflow-hidden !border-none;
+} */
+
+/* 383C44 */
