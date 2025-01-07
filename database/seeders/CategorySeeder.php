@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
@@ -12,6 +12,22 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $categories = require database_path('data/Categories.php');
+
+        $categories->each(fn ($category) => $this->createCategoryWithChildren($category));
+    }
+
+    private function createCategoryWithChildren(array $category, ?int $parentId = null): void
+    {
+        $category = Category::create([
+            'name' => $category['name'],
+            'parent_id' => $parentId,
+        ]);
+
+        if (! empty($category['children'])) {
+            foreach ($category['children'] as $child) {
+                $this->createCategoryWithChildren($child, $category->id);
+            }
+        }
     }
 }

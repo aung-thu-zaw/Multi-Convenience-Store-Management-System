@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Brand;
 use Illuminate\Database\Seeder;
 
 class BrandSeeder extends Seeder
@@ -12,6 +12,8 @@ class BrandSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $brands = require database_path('data/Brands.php');
+
+        $brands->each(fn ($brand) => Brand::create($brand));
     }
 }
