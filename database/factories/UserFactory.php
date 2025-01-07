@@ -24,21 +24,16 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
+            'avatar' => "https://i.pravatar.cc/150?img=" . fake()->numberBetween(1, 70),
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
+            'phone_number' => fake()->unique()->phoneNumber(),
+            'password' => static::$password ??= Hash::make('Password!'),
+            'address' => fake()->address(),
+            'status' => fake()->randomElement(['active', 'inactive']),
+            'last_login_at' => fake()->dateTimeBetween('-1 week', 'now'),
             'remember_token' => Str::random(10),
+            "created_at" => fake()->dateTimeBetween('-1 years', 'now'),
         ];
-    }
-
-    /**
-     * Indicate that the model's email address should be unverified.
-     */
-    public function unverified(): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'email_verified_at' => null,
-        ]);
     }
 }
