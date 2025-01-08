@@ -130,8 +130,12 @@ h4 {
     @apply hover:!bg-[#383C44] !font-medium !text-white;
 }
 
-.fi-logo{
-    @apply !text-[#F2890A]
+.fi-logo {
+    @apply !text-[#F2890A];
+}
+
+.fi-sidebar-item-icon {
+    @apply !w-4 !h-4;
 }
 /* 101314 */
 /*
