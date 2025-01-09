@@ -27,6 +27,7 @@ class CategoryResource extends Resource
         return $table
             ->query(Category::query()->whereNull('parent_id'))
             ->columns(CategoryTableConfig::getColumns())
+            ->defaultSort("id", "desc")
             ->filters([
                 //
             ])
@@ -49,8 +50,6 @@ class CategoryResource extends Resource
     {
         return [
             'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
-            'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
     }
 }

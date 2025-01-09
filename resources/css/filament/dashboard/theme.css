@@ -178,9 +178,26 @@ h4 {
 }
 
 .fi-modal-heading {
-    @apply !text-white;
+    @apply !text-white !capitalize;
 }
 
 .fi-modal-description {
     @apply !text-gray-300;
+}
+
+.fi-ta-header-cell-sort-icon {
+    @apply !text-[#F2890A];
+}
+
+.fi-pagination-items,
+.fi-pagination-item > button {
+    @apply !bg-[#383C44] hover:!bg-[#2e3138];
+}
+
+.fi-pagination-item {
+    @apply !border-gray-600;
+}
+
+.fi-active > .fi-pagination-item-button > .fi-pagination-item-label {
+    @apply !text-[#F2890A];
 }
