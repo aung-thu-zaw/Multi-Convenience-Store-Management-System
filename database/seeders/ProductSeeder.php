@@ -27,7 +27,7 @@ class ProductSeeder extends Seeder
         $variantProductsByCategory->each(function ($data, $category) {
             $attributesWithValues = $data['attributes'];
 
-            $category = Category::firstOrCreate(['name' => $category]);
+            $category = Category::where('name', $category)->first();
 
             $this->createNecessaryBrandForProducts($data['brands']);
 

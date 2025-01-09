@@ -38,7 +38,7 @@ class DashboardPanelProvider extends PanelProvider
             ->brandName('Convenience Store')
             ->login()
             ->colors([
-                'primary' => Color::Amber
+                'primary' => Color::Amber,
             ])
             ->font('Roboto', provider: GoogleFontProvider::class)
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')

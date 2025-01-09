@@ -19,14 +19,14 @@ class CategorySeeder extends Seeder
 
     private function createCategoryWithChildren(array $category, ?int $parentId = null): void
     {
-        $category = Category::create([
+        $parentCategory = Category::create([
             'name' => $category['name'],
             'parent_id' => $parentId,
         ]);
 
         if (! empty($category['children'])) {
             foreach ($category['children'] as $child) {
-                $this->createCategoryWithChildren($child, $category->id);
+                $this->createCategoryWithChildren($child, $parentCategory->id);
             }
         }
     }
