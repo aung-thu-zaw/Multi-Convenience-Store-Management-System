@@ -31,6 +31,13 @@ class CategoryFormConfig
                         ->required()
                         ->string()
                         ->maxLength(255)
+                        ->readOnly(function (Get $get): bool {
+                            $category = Category::where('name', $get()['name'])->first();
+                            if ($category && $category->products()->exists()) {
+                                return true;
+                            }
+                            return false;
+                        })
                 )
                 ->defaultItems(1)
                 ->columnSpanFull()
@@ -42,29 +49,15 @@ class CategoryFormConfig
                 ->deleteAction(
                     function (Action $action) {
                         $action
-                        ->hidden(function ($get) {
-                            $children = $get('children');
-
-                            foreach ($children as $child) {
-                                $childName = $child['name'];
-
-                                $category = Category::where('name', $childName)->first();
-
-                                if ($category && $category->products()->exists()) {
-                                    return true;
-                                }
+                        ->disabled(function (array $arguments, Repeater $component): bool {
+                            $items = $component->getState();
+                            $childCategory = $items[$arguments['item']];
+                            $category = Category::where('name', $childCategory)->first();
+                            if ($category && $category->products()->exists()) {
+                                return true;
                             }
-
                             return false;
-                        })
-                            ->requiresConfirmation()
-                            ->modalSubmitActionLabel('Yes, delete it')
-                            ->modalCancelAction(function ($action) {
-                                return $action
-                                    ->extraAttributes([
-                                        'class' => '!bg-gray-600 text-white',
-                                    ]);
-                            });
+                        });
                     }
                 ),
         ];
