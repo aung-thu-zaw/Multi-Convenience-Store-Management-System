@@ -63,7 +63,7 @@ class CategoryTableConfig
                         ->whereNotIn('id', $processedChildIds)
                         ->delete();
 
-                    $record->update(["name" => $data["name"]]);
+                    $record->update(['name' => $data['name']]);
 
                     return $record;
                 })
@@ -78,21 +78,12 @@ class CategoryTableConfig
                 ->button()
                 ->extraAttributes(function (Category $record) {
                     return [
-                        'class' => 'px-2.5 py-2.5 text-xs '.($record->children()->exists() || $record->products()->exists() ? 'cursor-not-allowed' : ''),
+                        'class' => 'px-2.5 py-2.5 text-xs ' . (
+                            $record->hasChildrenWithProducts() ? 'cursor-not-allowed' : ''
+                        ),
                     ];
                 })
-                ->disabled(function (Category $record) {
-                    return $record->children()->exists() || $record->products()->exists();
-                })
-                // ->tooltip(function (Category $record) {
-                //     if ($record->children()->exists()) {
-                //         return 'This category has child categories and cannot be deleted.';
-                //     } elseif ($record->products()->exists()) {
-                //         return 'This category is linked to products and cannot be deleted.';
-                //     }
-
-                //     return null;
-                // })
+                ->disabled(fn (Category $record) => $record->hasChildrenWithProducts())
                 ->requiresConfirmation()
                 ->modalSubmitActionLabel('Yes, delete it')
                 ->modalCancelAction(function ($action) {

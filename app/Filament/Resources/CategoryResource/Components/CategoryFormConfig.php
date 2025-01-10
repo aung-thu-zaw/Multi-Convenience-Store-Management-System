@@ -6,6 +6,7 @@ use App\Models\Category;
 use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Get;
 use Filament\Support\Colors\Color;
 
 class CategoryFormConfig
@@ -17,12 +18,7 @@ class CategoryFormConfig
                 ->label('Parent Category')
                 ->placeholder('Enter parent category name')
                 ->required()
-                ->rule(function (Category $record) {
-                    return !$record->products()->exists()
-                        ? null
-                        : 'This category is associated with products and cannot be modified.';
-                })
-                ->unique(ignoreRecord:true)
+                ->unique(ignoreRecord: true)
                 ->string()
                 ->maxLength(255)
                 ->columnSpanFull(),
@@ -31,7 +27,6 @@ class CategoryFormConfig
                 ->label('Child Categories')
                 ->simple(
                     TextInput::make('name')
-                        ->label('Child Category')
                         ->placeholder('Enter child category name')
                         ->required()
                         ->string()
@@ -40,13 +35,28 @@ class CategoryFormConfig
                 ->defaultItems(1)
                 ->columnSpanFull()
                 ->required()
-                ->hint('Please add at least one child category before creating a parent category.')
+                // ->hint('Please add at least one child category before creating a parent category.')
                 ->hintColor(Color::hex('#7B7F87'))
                 ->reorderable(false)
                 ->addActionLabel('Add Child Category')
                 ->deleteAction(
                     function (Action $action) {
                         $action
+                        ->hidden(function ($get) {
+                            $children = $get('children');
+
+                            foreach ($children as $child) {
+                                $childName = $child['name'];
+
+                                $category = Category::where('name', $childName)->first();
+
+                                if ($category && $category->products()->exists()) {
+                                    return true;
+                                }
+                            }
+
+                            return false;
+                        })
                             ->requiresConfirmation()
                             ->modalSubmitActionLabel('Yes, delete it')
                             ->modalCancelAction(function ($action) {

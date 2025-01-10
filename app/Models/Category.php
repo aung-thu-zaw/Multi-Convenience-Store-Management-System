@@ -41,4 +41,11 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function hasChildrenWithProducts(): bool
+    {
+        return $this->products()->exists() || $this->children()->exists() && $this->children->contains(function ($child) {
+            return $child->products()->exists();
+        });
+    }
 }
