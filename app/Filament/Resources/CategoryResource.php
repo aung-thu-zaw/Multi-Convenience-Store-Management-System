@@ -8,7 +8,6 @@ use App\Filament\Resources\CategoryResource\Pages;
 use App\Models\Category;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Table;
 
 class CategoryResource extends Resource
@@ -27,23 +26,14 @@ class CategoryResource extends Resource
         return $table
             ->query(Category::query()->whereNull('parent_id'))
             ->columns(CategoryTableConfig::getColumns())
-            ->defaultSort("id", "desc")
-            ->filters([
-                //
-            ])
+            ->defaultSort('id', 'desc')
+            ->filters([])
             ->actions(CategoryTableConfig::getColumnActions())
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
-    }
+            ->bulkActions([])
+            ->emptyStateIcon('mdi-file-search-outline')
+            ->emptyStateHeading('No Categories Found!')
+            ->emptyStateDescription('It seems there are currently no entries to display in this table. Please check back later or try adding new data.');
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

@@ -32,7 +32,7 @@ class DashboardPanelProvider extends PanelProvider
             ->sidebarCollapsibleOnDesktop()
             ->sidebarWidth('17rem')
             ->collapsedSidebarWidth('20rem')
-            ->breadcrumbs(false)
+            ->breadcrumbs(true)
             ->defaultThemeMode(ThemeMode::Light)
             ->viteTheme('resources/css/filament/dashboard/theme.css')
             ->brandName('Convenience Store')
