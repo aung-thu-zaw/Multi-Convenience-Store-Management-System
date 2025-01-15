@@ -78,7 +78,7 @@ class CategoryTableConfig
                 ->button()
                 ->extraAttributes(function (Category $record) {
                     return [
-                        'class' => 'px-2.5 py-2.5 text-xs ' . (
+                        'class' => 'px-2.5 py-2.5 text-xs '.(
                             $record->hasChildrenWithProducts() ? 'cursor-not-allowed' : ''
                         ),
                     ];

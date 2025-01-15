@@ -200,3 +200,7 @@ h4 {
 .fi-ta-empty-state-description {
     @apply !text-gray-400;
 }
+
+.filament-simple-alert {
+    @apply !bg-opacity-100;
+}
