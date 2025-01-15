@@ -35,9 +35,7 @@
 .fi-ta-header-toolbar,
 .fi-ta-table,
 .fi-pagination,
-.fi-ta-header-cell,
 .fi-ta-actions-header-cell,
-.fi-ta-cell,
 .fi-ta-selection-indicator,
 .fi-ta-filter-indicators,
 .fi-ta-header-ctn,
@@ -48,13 +46,27 @@ table {
     @apply !bg-[#23252C] !divide-gray-700;
 }
 
+/* .fi-ta-cell */
+
+.fi-ta-table > thead > tr,
+.fi-ta-actions-header-cell {
+    @apply !bg-[#2e3138];
+}
+
+tr {
+    @apply hover:!bg-[#1E2024];
+}
+
 .fi-checkbox-input {
     @apply !bg-gray-600 checked:!bg-[#F2890A];
 }
 
-.fi-ta-header-cell-label,
 .fi-ta-text-item-label {
-    @apply !text-gray-200 !font-medium;
+    @apply !text-white !font-normal;
+}
+
+.fi-ta-header-cell-label {
+    @apply !text-[#d1d5db] !font-bold;
 }
 
 .fi-ta-ctn {
@@ -63,7 +75,7 @@ table {
 
 .fi-main,
 .fi-header-heading,
-.fi-ta-empty-state-icon-ctn {
+body {
     @apply !bg-[#101314] !text-white;
 }
 
@@ -93,7 +105,8 @@ table {
 }
 
 .fi-btn {
-    @apply !bg-[#F2890A] !text-white !rounded-[0.3rem] !font-semibold !px-4 !py-2.5 !capitalize;
+    /* @apply !bg-[#F2890A] !text-white !rounded-[0.3rem] !font-semibold !px-4 !py-2.5 !capitalize; */
+    @apply !rounded-[0.25rem] !font-semibold !capitalize;
 }
 
 .fi-btn-icon {
@@ -130,13 +143,64 @@ h4 {
     @apply hover:!bg-[#383C44] !font-medium !text-white;
 }
 
-.fi-logo{
-    @apply !text-[#F2890A]
+.fi-logo {
+    @apply !text-[#F2890A];
 }
-/* 101314 */
-/*
-.fi-pagination-item-button {
-    @apply !ring-0 !rounded-md !overflow-hidden !border-none;
-} */
 
-/* 383C44 */
+.fi-sidebar-item-icon,
+.fi-btn-icon {
+    @apply !w-4 !h-4;
+}
+
+.fi-header-heading {
+    @apply !text-2xl;
+}
+
+.fi-modal-window {
+    @apply !bg-[#23252B] !text-white;
+}
+
+.fi-modal-heading {
+    @apply !text-white !capitalize;
+}
+
+.fi-modal-description {
+    @apply !text-gray-300;
+}
+
+.fi-ta-header-cell-sort-icon {
+    @apply !text-[#F2890A];
+}
+
+.fi-pagination-items,
+.fi-pagination-item > button {
+    @apply !bg-[#383C44] hover:!bg-[#2e3138];
+}
+
+.fi-pagination-item {
+    @apply !border-gray-600;
+}
+
+.fi-active > .fi-pagination-item-button > .fi-pagination-item-label {
+    @apply !text-[#F2890A];
+}
+
+/* .fi-fo-repeater-item {
+    @apply !bg-[#2e3138] !text-gray-300 !overflow-hidden;
+} */
+.fi-fo-simple-repeater > div > .fi-btn {
+    @apply !bg-[#F2890A] !text-white;
+}
+
+.fi-ta-empty-state-icon-ctn,
+.fi-ta-empty-state-icon {
+    @apply !bg-[#383C44]  !text-[#F2890A];
+}
+
+.fi-ta-empty-state-description {
+    @apply !text-gray-400;
+}
+
+.filament-simple-alert {
+    @apply !bg-opacity-100;
+}

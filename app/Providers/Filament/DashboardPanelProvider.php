@@ -29,12 +29,16 @@ class DashboardPanelProvider extends PanelProvider
             ->id('dashboard')
             ->path('dashboard')
             ->darkMode(false)
+            ->sidebarCollapsibleOnDesktop()
+            ->sidebarWidth('17rem')
+            ->collapsedSidebarWidth('20rem')
+            ->breadcrumbs(true)
             ->defaultThemeMode(ThemeMode::Light)
             ->viteTheme('resources/css/filament/dashboard/theme.css')
             ->brandName('Convenience Store')
             ->login()
             ->colors([
-                'primary' => Color::Amber
+                'primary' => Color::Amber,
             ])
             ->font('Roboto', provider: GoogleFontProvider::class)
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')

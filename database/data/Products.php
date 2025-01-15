@@ -514,7 +514,7 @@ return collect([
         ],
     ],
 
-    'Energy Drink' => [
+    'Energy Drinks' => [
         'attributes' => [
             'Size' => ['250ml', '500ml', '1L'],
             'Flavor' => ['Original', 'Tropical', 'Berry', 'Lime', 'Orange'],
